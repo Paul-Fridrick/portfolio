@@ -1,0 +1,12 @@
+{
+  "header": {
+    "presentation": "Présentation",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Bienvenue sur mon portfolio"
+  }
+}
+}
