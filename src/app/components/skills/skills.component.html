@@ -1,56 +1,31 @@
 <section id="skills" class="bg-white pt-20 pb-12">
   <div class="container mx-auto text-center">
     <h2 class="text-3xl font-bold text-gray-800 mb-8">Mes Compétences</h2>
-
-    <!-- Wrapper des sections Front-End et Back-End en Flex -->
     <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
-
-      <!-- Espace Front-End -->
       <div class="md:w-1/2">
         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Front-End</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">Angular</h4>
-            <p class="text-gray-600 mt-2">Développement Frontend</p>
+          <div *ngFor="let frontend of Frontend" class="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div class="flex justify-center items-center space-x-2">
+              <img [src]="frontend.logo" alt="{{ frontend.name }} logo" class="w-8 h-8">
+              <h4 class="text-xl font-semibold text-gray-800">{{ frontend.name }}</h4>
+            </div>
+            <p class="text-gray-600 mt-2">{{ frontend.level }}</p>
           </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">React</h4>
-            <p class="text-gray-600 mt-2">Framework JavaScript</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">Tailwind CSS</h4>
-            <p class="text-gray-600 mt-2">CSS Utilitaire</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">HTML & CSS</h4>
-            <p class="text-gray-600 mt-2">Langages de base du web</p>
           </div>
         </div>
-      </div>
-
-      <!-- Espace Back-End -->
       <div class="md:w-1/2">
         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Back-End</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">FastAPI</h4>
-            <p class="text-gray-600 mt-2">Framework Python</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">Node.js</h4>
-            <p class="text-gray-600 mt-2">Serveur JavaScript</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">Docker</h4>
-            <p class="text-gray-600 mt-2">Conteneurisation</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h4 class="text-xl font-semibold text-gray-800">MongoDB</h4>
-            <p class="text-gray-600 mt-2">Base de données NoSQL</p>
+          <div *ngFor="let backend of Backend" class="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div class="flex justify-center items-center space-x-2">
+              <img [src]="backend.logo" alt="{{ backend.name }} logo" class="w-8 h-8">
+              <h4 class="text-xl font-semibold text-gray-800">{{ backend.name }}</h4>
+            </div>
+            <p class="text-gray-600 mt-2">{{ backend.level }}</p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>

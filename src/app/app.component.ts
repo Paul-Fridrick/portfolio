@@ -6,6 +6,8 @@ import {SkillsComponent} from './components/skills/skills.component';
 import {ProjetcsComponent} from './components/projetcs/projetcs.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {FooterComponent} from './components/footer/footer.component';
+import { TranslocoService } from '@ngneat/transloco';
+
 
 @Component({
   selector: 'app-root',

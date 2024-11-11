@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   templateUrl: './presentation.component.html',
 })
 export class PresentationComponent {
-
+  name = 'Paul FRIDRICK';
 }
