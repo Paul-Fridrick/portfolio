@@ -11,6 +11,7 @@ export class SkillsComponent {
   Frontend = [
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg', name: 'Angular', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', name: 'TypeScript', level: 'Connaissances avancées' },
+    { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg', name: 'Ionic', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML & CSS', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg', name: 'Tailwind CSS', level: 'Connaissances basiques' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', name: 'React', level: 'Connaissances basiques' },
