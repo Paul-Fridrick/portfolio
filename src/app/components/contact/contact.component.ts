@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './contact.component.html',
 })
-export class ContactComponent {
-
-}
+export class ContactComponent {}
