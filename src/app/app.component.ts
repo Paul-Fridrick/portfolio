@@ -12,7 +12,15 @@ import { TranslocoService } from '@ngneat/transloco';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, PresentationComponent, SkillsComponent, ProjetcsComponent, ContactComponent, FooterComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    PresentationComponent,
+    SkillsComponent,
+    ProjetcsComponent,
+    ContactComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

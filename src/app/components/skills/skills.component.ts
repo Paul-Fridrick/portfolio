@@ -20,9 +20,10 @@ export class SkillsComponent {
 
   Backend = [
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', name: 'NodeJS', level: 'Connaissances avancées' },
+    { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', name: 'ExpressJS', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg',name: 'NestJS', level: 'Connaissances avancées' },
-    { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',name: 'Docker', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',name: 'MongoDB', level: 'Connaissances avancées' },
+    { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',name: 'Docker', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',name: 'FastAPI', level: 'Connaissances basiques' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg',name: 'GO', level: 'Connaissances basiques' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',name: 'MySQL', level: 'Connaissances basiques' },
