@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-
+;
 
 @Component({
   selector: 'app-contact',
