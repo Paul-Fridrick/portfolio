@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './presentation.component.html',
+
 })
 export class PresentationComponent {
   name = 'Paul FRIDRICK';
