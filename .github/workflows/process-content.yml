@@ -2,7 +2,7 @@ name: Process Content
 
 on:
   push:
-    branches: [main]
+    branches: master
     paths:
       - 'content/**'
 
