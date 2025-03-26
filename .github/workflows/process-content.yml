@@ -3,13 +3,13 @@ name: Process Content
 on:
   push:
     branches:
-      - main # ou master selon votre branche principale
+      - master
     paths:
-      - 'content/**/*.md'
-  workflow_dispatch: # Permet de déclencher manuellement
+      - 'content/**'
+  workflow_dispatch:
 
 permissions:
-  contents: write # Ajoute les permissions nécessaires
+  contents: write
 
 jobs:
   build:
@@ -18,12 +18,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Important pour avoir l'historique complet
+          fetch-depth: 0
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           cache: 'npm'
       
       - name: Install dependencies
