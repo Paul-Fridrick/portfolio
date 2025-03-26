@@ -9,7 +9,7 @@ import { Project } from '../../models/project.interface';
   templateUrl: './project-modal.component.html',
 })
 export class ProjectModalComponent {
-  @Input() project!: Project;
+  @Input() project: Project | null = null;
   @Output() closeModal = new EventEmitter<void>();
 
   close() {

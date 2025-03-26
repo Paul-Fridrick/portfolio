@@ -5,14 +5,11 @@ export interface Project {
   slug: string;
   date: string;
   image: string;
-  description: string;
-  fonctionnalites: string[];
-  defis: string[];
-  solutions: string[];
   technologies: string[];
   github?: string;
   demo?: string;
   featured: boolean;
   order: number;
+  content: string;
   id: string;
 } 

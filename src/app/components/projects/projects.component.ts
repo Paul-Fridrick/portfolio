@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectService } from '../../services/projects.service';
 import { Project } from '../../models/project.interface';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ProjectModalComponent } from '../project-modal/project-modal.component';
 
 @Component({
@@ -13,13 +12,10 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
-  selectedProject: any = null;
+  selectedProject: Project | null = null;
   showModal = false;
 
-  constructor(
-    private projectsService: ProjectService,
-    private sanitizer: DomSanitizer
-  ) {}
+  constructor(private projectsService: ProjectService) {}
 
   ngOnInit(): void {
     this.projectsService.getAllProjects().subscribe((projects: Project[]) => {
@@ -27,7 +23,7 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-  openModal(project: any) {
+  openModal(project: Project) {
     this.selectedProject = project;
     this.showModal = true;
   }
