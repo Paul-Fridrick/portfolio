@@ -46,6 +46,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add src/assets/data/
+          git add public/data/
           git commit -m "Auto-update content from Markdown files"
           git push

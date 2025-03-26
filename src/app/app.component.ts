@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from './components/header/header.component';
 import {PresentationComponent} from './components/presentation/presentation.component';
 import {SkillsComponent} from './components/skills/skills.component';
-import {ProjetcsComponent} from './components/projetcs/projetcs.component';
+import {ProjectsComponent} from './components/projects/projects.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {FooterComponent} from './components/footer/footer.component';
 
@@ -16,7 +16,7 @@ import {FooterComponent} from './components/footer/footer.component';
     HeaderComponent,
     PresentationComponent,
     SkillsComponent,
-    ProjetcsComponent,
+    ProjectsComponent,
     ContactComponent,
     FooterComponent,
   ],

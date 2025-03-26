@@ -6,7 +6,7 @@ const mkdirp = require('mkdirp');
 
 // Chemin vers les dossiers de contenu et de destination
 const PROJECTS_CONTENT_DIR = path.join(__dirname, '../content/projects');
-const DATA_DIR = path.join(__dirname, '../src/assets/data');
+const DATA_DIR = path.join(__dirname, '../public/data');
 
 // Assurer que le répertoire de destination existe
 mkdirp.sync(DATA_DIR);

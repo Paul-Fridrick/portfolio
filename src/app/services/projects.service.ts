@@ -1,52 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, map, shareReplay } from 'rxjs/operators';
-
-export interface Project {
-  id: string;
-  title: string;
-  slug: string;
-  date: string;
-  image: string;
-  technologies: string[];
-  github?: string;
-  demo?: string;
-  featured: boolean;
-  order?: number;
-  content: string;
-}
+import { Observable, map } from 'rxjs';
+import { Project } from '../models/project.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsService {
-  private projectsCache$: Observable<Project[]> | null = null;
-  
+export class ProjectService {
+  private projectsUrl = '/data/projects.json';
+
   constructor(private http: HttpClient) { }
-  
-  getProjects(): Observable<Project[]> {
-    if (!this.projectsCache$) {
-      this.projectsCache$ = this.http.get<Project[]>('assets/data/projects.json').pipe(
-        shareReplay(1),
-        catchError(error => {
-          console.error('Erreur lors du chargement des projets:', error);
-          return of([]);
-        })
-      );
-    }
-    return this.projectsCache$;
+
+  getAllProjects(): Observable<Project[]> {
+    return this.http.get<Project[]>(this.projectsUrl);
   }
-  
+
+  getProjectById(id: string): Observable<Project | undefined> {
+    return this.getAllProjects().pipe(
+      map(projects => projects.find(project => project.id === id))
+    );
+  }
+
+  getProjectBySlug(slug: string): Observable<Project | undefined> {
+    return this.getAllProjects().pipe(
+      map(projects => projects.find(project => project.slug === slug))
+    );
+  }
+
   getFeaturedProjects(): Observable<Project[]> {
-    return this.getProjects().pipe(
-      map(projects => projects.filter(p => p.featured))
+    return this.getAllProjects().pipe(
+      map(projects => projects.filter(project => project.featured))
     );
   }
-  
-  getProjectBySlug(slug: string): Observable<Project | null> {
-    return this.getProjects().pipe(
-      map(projects => projects.find(p => p.slug === slug) || null)
-    );
-  }
-}
+} 
