@@ -2,7 +2,7 @@
 title: OneClick
 slug: OneClick
 date: 2025-03-26
-image: images/One-Click-Black.jpg
+image: images/One-Click-Black.png
 technologies: [React, FastApi, Go, MariaDb]
 github: https://github.com/username/projet-1
 demo: https://demo-projet-1.com
