@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Titre du Projet",
+    "slug": "titre-du-projet",
+    "date": "2023-06-15T00:00:00.000Z",
+    "image": "/assets/images/projects/projet-1.jpg",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Firebase"
+    ],
+    "github": "https://github.com/username/projet-1",
+    "demo": "https://demo-projet-1.com",
+    "featured": true,
+    "order": 1,
+    "content": "<h2>Description</h2>\n<p>Description détaillée du projet...</p>\n<h2>Fonctionnalités</h2>\n<ul>\n<li>Fonctionnalité 1</li>\n<li>Fonctionnalité 2</li>\n<li>Fonctionnalité 3</li>\n</ul>\n<h2>Défis et Solutions</h2>\n<p>Explication des défis rencontrés...</p>\n",
+    "id": "test"
+  }
+]
