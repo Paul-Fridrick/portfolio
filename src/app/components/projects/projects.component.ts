@@ -19,8 +19,13 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectsService.getAllProjects().subscribe((projects: Project[]) => {
-      this.projects = projects;
+      this.projects = projects.sort((a, b) => a.order - b.order);
     });
+  }
+
+  getDescription(content: string): string {
+    const match = content.match(/<h2>Description<\/h2>\s*<p>(.*?)<\/p>/s);
+    return match ? match[1] : '';
   }
 
   openModal(project: Project) {
