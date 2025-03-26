@@ -1,3 +1,5 @@
+import { SafeHtml } from '@angular/platform-browser';
+
 export interface Project {
   title: string;
   slug: string;
@@ -8,6 +10,6 @@ export interface Project {
   demo: string;
   featured: boolean;
   order: number;
-  content: string;
+  content: string | SafeHtml;
   id: string;
 } 

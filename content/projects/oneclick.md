@@ -1,9 +1,9 @@
 ---
-title: Titre du Projet
-slug: titre-du-projet
-date: 2023-06-15
-image: /assets/images/projects/projet-1.jpg
-technologies: [Angular, TypeScript, Firebase]
+title: OneClick
+slug: OneClick
+date: 2025-03-26
+image: images/One-Click-Black.jpg
+technologies: [React, FastApi, Go, MariaDb]
 github: https://github.com/username/projet-1
 demo: https://demo-projet-1.com
 featured: true
@@ -12,7 +12,7 @@ order: 1
 
 ## Description
 
-Description détaillée du projet...
+OneClick est une solution de simplification d'initialisation de projet Informatique.
 
 ## Fonctionnalités
 

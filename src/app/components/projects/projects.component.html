@@ -7,7 +7,7 @@
           <img [src]="project.image" [alt]="project.title" class="w-8 h-8 rounded">
           <h3 class="text-xl font-semibold text-gray-800">{{ project.title }}</h3>
         </div>
-        <p class="text-gray-600 mt-2">{{ project.content | slice:0:150 }}...</p>
+        <div class="text-gray-600 mt-2" [innerHTML]="project.content"></div>
         <div class="mt-4 flex justify-center space-x-4">
           <a *ngIf="project.github" [href]="project.github" target="_blank" class="text-blue-500 hover:underline">
             GitHub
