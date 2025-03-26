@@ -3,7 +3,7 @@
     "title": "OneClick",
     "slug": "OneClick",
     "date": "2025-03-26T00:00:00.000Z",
-    "image": "images/One-Click-Black.jpg",
+    "image": "images/One-Click-Black.png",
     "technologies": [
       "React",
       "FastApi",
