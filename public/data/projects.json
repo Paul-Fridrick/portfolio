@@ -4,22 +4,6 @@
     "slug": "OneClick",
     "date": "2025-03-26T00:00:00.000Z",
     "image": "images/One-Click-Black.png",
-    "description": "OneClick est une solution de simplification d'initialisation de projet Informatique.",
-    "fonctionnalites": [
-      "Fonctionnalité 1",
-      "Fonctionnalité 2",
-      "Fonctionnalité 3"
-    ],
-    "defis": [
-      "Défi 1",
-      "Défi 2",
-      "Défi 3"
-    ],
-    "solutions": [
-      "Solution 1",
-      "Solution 2",
-      "Solution 3"
-    ],
     "technologies": [
       "React",
       "FastApi",
@@ -30,6 +14,25 @@
     "demo": "https://demo-projet-1.com",
     "featured": true,
     "order": 1,
+    "content": "<h2>Description</h2>\n<p>OneClick est une solution de simplification d&#39;initialisation de projet Informatique.</p>\n<h2>Fonctionnalités</h2>\n<ul>\n<li>Fonctionnalité 1</li>\n<li>Fonctionnalité 2</li>\n<li>Fonctionnalité 3</li>\n</ul>\n<h2>Défis et Solutions</h2>\n<p>Explication des défis rencontrés...</p>\n",
     "id": "oneclick"
+  },
+  {
+    "title": "OneClick test",
+    "slug": "OneClick test",
+    "date": "2025-03-26T00:00:00.000Z",
+    "image": "images/One-Click-Black.png",
+    "technologies": [
+      "React",
+      "FastApi",
+      "Go",
+      "MariaDb"
+    ],
+    "github": "https://github.com/username/projet-1",
+    "demo": "https://demo-projet-1.com",
+    "featured": true,
+    "order": 1,
+    "content": "<h2>Description</h2>\n<p>OneClick est une solution de simplification d&#39;initialisation de projet Informatique.</p>\n<h2>Fonctionnalités</h2>\n<ul>\n<li>Fonctionnalité 1</li>\n<li>Fonctionnalité 2</li>\n<li>Fonctionnalité 3</li>\n</ul>\n<h2>Défis et Solutions</h2>\n<p>Explication des défis rencontrés...</p>\n",
+    "id": "test"
   }
 ]
