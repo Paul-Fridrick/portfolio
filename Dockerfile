@@ -13,4 +13,4 @@ FROM nginx:alpine
 # 👇 copie les vrais fichiers Angular !
 COPY --from=build /app/dist/portfolio/browser /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 3000
