@@ -22,7 +22,7 @@ pipeline {
 
     stage('Build Angular') {
       steps {
-        sh 'npm run build -- --configuration=production'
+        sh 'npm run build'
       }
     }
 
