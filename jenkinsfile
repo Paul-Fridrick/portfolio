@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE = "ghcr.io/Paul-Fridrick/portfolio"
+    DOCKER_IMAGE = "ghcr.io/paul-fridrick/portfolio"
     DOCKER_TAG = "${env.BUILD_NUMBER}"
     GITHUB_TOKEN = credentials('github-pat')
   }
