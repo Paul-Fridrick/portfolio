@@ -10,8 +10,6 @@ featured: true
 order: 1
 ---
 
-# OneClick
-
 ## Description
 
 **Projet de Fin d'Études** — OneClick est une plateforme innovante permettant de simplifier et d'automatiser l'initialisation de projets web. Grâce à une interface intuitive, OneClick génère les environnements de développement complets (frontend, backend, base de données) en quelques clics, en prenant en compte les technologies choisies par l'utilisateur.

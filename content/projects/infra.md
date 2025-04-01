@@ -9,6 +9,8 @@ featured: true
 order: 1
 ---
 
+## Description
+
 **Projet personnel** — J'ai développé une solution d’automatisation de déploiement pour éviter de tout refaire manuellement à chaque projet.  
 L'objectif : mettre en place une **chaîne CI/CD complète**, sécurisée, et facilement réutilisable.
 
