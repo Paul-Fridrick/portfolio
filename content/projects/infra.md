@@ -25,7 +25,7 @@ Résultat : un push sur GitHub déclenche automatiquement le build, la création
 
 ## 🔧 Schéma d'architecture
 
-![Schéma d'Infrastructure CI/CD](images/infra-schema.png)
+![Schéma d'Infrastructure CI/CD](images/infrastructure.png)
 
 ---
 
