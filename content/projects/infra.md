@@ -2,7 +2,7 @@
 title: Infrastructure
 slug: Infrastructure
 date: 2025-03-26
-image: images/ci:cd.webp
+image: images/One-Click-Black.png
 technologies: [Docker, Jenkins, Nginx, HTTPS]
 demo: https://pfsolutions.tech
 featured: true
@@ -13,50 +13,90 @@ order: 1
 
 ## Description
 
-**Projet Personnel** — Développant diverses solutions sur mon temps libre pour approfondir mes connaissances, je me suis confronté à un problème : de devoir tout déployer à la main à chaque fois. Du coup je me suis posé la question de comment automatiser le déploiement de mes applications de manière sûre et sécurisée.
+**Projet personnel** — J'ai développé une solution d’automatisation de déploiement pour éviter de tout refaire manuellement à chaque projet.  
+L'objectif : mettre en place une **chaîne CI/CD complète**, sécurisée, et facilement réutilisable.
 
-Ce projet m'a permis de construire une véritable **chaîne CI/CD complète**, depuis le push GitHub jusqu'à la mise en ligne publique sécurisée d'un projet conteneurisé. J’ai utilisé **Jenkins, Docker, Nginx, Let's Encrypt et DigitalOcean** pour orchestrer tout cela.
+Ce setup s’appuie sur :
+- **Jenkins**
+- **Docker**
+- **Nginx**
+- **Let's Encrypt**
+- **Un VPS DigitalOcean**
+
+Résultat : un push sur GitHub déclenche automatiquement le build, la création de l’image Docker, le push vers GHCR, et le déploiement via Docker sur le serveur — avec HTTPS activé.
+
+---
 
 ## Fonctionnalités
 
-### Stack Technologique
-- Sélection de stacks technologiques (Docker, Jenkins, Nginx, HTTPS, DigitalOcean)
-- Automatisation du déploiement depuis GitHub jusqu'à un VPS
+### 🔧 Stack Technologique
+- Docker, Jenkins, Nginx, HTTPS, DigitalOcean
+- Déploiement automatisé depuis GitHub jusqu'au VPS
 
-### Architecture
-- Reverse proxy avec Nginx et configuration automatique du SSL via Certbot
+### 🏗️ Architecture
+- Reverse proxy Nginx
+- Configuration SSL automatique via Certbot
 
-## Défis et Solutions
+---
 
-### 1. Déploiement multi-environnement
-**Défi :** Gérer différents environnements (dev, staging, prod) sur un seul VPS.  
-**Solution :** Conteneurisation de chaque projet avec Docker, exposition sur des ports distincts, et reverse proxy Nginx configuré dynamiquement pour chaque domaine ou sous-domaine.
+## Défis & Solutions
 
-### 2. Sécurisation de l'accès
-**Défi :** Servir les projets en HTTPS avec renouvellement automatique.  
-**Solution :** Intégration de Certbot pour générer et renouveler automatiquement les certificats Let's Encrypt.
+### 🧱 1. Multi-environnement
 
-### 3. Intégration continue
-**Défi :** Automatiser la chaîne de build, test, build Docker, push, et déploiement.  
-**Solution :** Mise en place d'un pipeline Jenkins détectant chaque push GitHub et déclenchant automatiquement la chaîne CI/CD.
+> **Défi :** Gérer `dev`, `staging`, et `prod` sur une seule machine  
+> **Solution :** Chaque projet est isolé dans un conteneur Docker exposé sur un port unique, derrière un reverse proxy Nginx.
 
-### 4. DNS & Domaine personnalisé
-**Défi :** Configurer un domaine personnalisé sur un registrar externe (LWS).  
-**Solution :** Pointage DNS manuel vers l’IP du VPS + configuration Nginx et génération SSL certifiée par Let's Encrypt.
+---
+
+### 🔐 2. HTTPS & sécurité
+
+> **Défi :** Servir les projets en HTTPS  
+> **Solution :** Intégration de Certbot avec renouvellement automatique des certificats Let's Encrypt.
+
+---
+
+### 🔁 3. Intégration continue
+
+> **Défi :** Automatiser build, test, Docker, push et déploiement  
+> **Solution :** Jenkins + GitHub Webhooks = déploiement automatique dès un `git push`.
+
+---
+
+### 🌍 4. DNS personnalisé
+
+> **Défi :** Utiliser un domaine chez un registrar externe (LWS)  
+> **Solution :** Reconfiguration des DNS pour pointer vers la VPS, configuration Nginx + Certbot.
+
+---
 
 ## Objectifs
 
-### Performance
-- Uniformiser les environnements de développement
-- Déployer automatiquement dès un `git push`
+### 🚀 Performance
+- Uniformiser les environnements
+- Réduire le temps de déploiement à **quelques secondes**
 
-### Collaboration
-- Permettre à d'autres projets de se brancher sur la même architecture
+### 🤝 Collaboration
+- Permettre à plusieurs projets (admin, front, API...) de cohabiter sur une même infra
+- Architecture extensible pour ajouter d'autres stacks
 
-## Vision
+---
 
-Ce setup me permet désormais de déployer facilement plusieurs projets (client, admin, API...) avec une logique standardisée. Il est conçu pour évoluer vers une architecture scalable, multi-sites, et potentiellement orchestrée (Docker Compose ou Kubernetes).
+## 🎯 Résultat
 
-## Résultat
+Le site **[pfsolutions.tech](https://pfsolutions.tech)** est la première instance de ce setup :
 
-Le projet de déploiement sur `https://pfsolutions.tech` en est une première démonstration concrète : push sur GitHub, génération d’image Docker, publication sur GitHub Container Registry, déploiement sur un VPS, et mise en ligne sécurisée automatiquement.
+- `git push` → build Angular
+- → image Docker générée & poussée
+- → déployée sur la VPS
+- → servie en HTTPS via Nginx + Certbot
+
+---
+
+## 🔭 Vision
+
+Ce setup a été pensé pour évoluer :
+- Multi-projets (front, back, microservices)
+- Multi-environnements (dev/prod)
+- Compatible Docker Compose & Kubernetes
+
+---
