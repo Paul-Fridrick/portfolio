@@ -1,59 +1,56 @@
-<nav class="fixed top-0 left-0 w-full bg-gray-800 p-4 z-50 shadow-md">
+<nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 p-4 z-50 shadow-md transition-colors duration-300">
   <div class="container mx-auto flex justify-between items-center">
-    <!-- Logo ou nom du site -->
-    <!-- Avatar, visible uniquement sur les petits écrans -->
-    <div class="flex justify-center items-center space-x-2">
-      <img src="images/logo PF Solutions.jpg" alt="Avatar" class="w-10 h-10 rounded-full">
-      <div class="text-white text-2xl font-bold hidden md:block">Paul FRIDRICK</div>
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="images/logo PF Solutions.jpg" alt="Avatar" class="w-10 h-10 rounded-full" />
+      <div class="text-black dark:text-white text-2xl font-bold hidden md:block">PF SOLUTIONS</div>
     </div>
 
-
-    <!-- Bouton pour ouvrir le menu mobile -->
+    <!-- Toggle button (mobile) -->
     <div class="block md:hidden">
-      <button (click)="isMenuOpen = true" class="text-white focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      <button (click)="isMenuOpen = true" class="text-black dark:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
 
-    <!-- Liens de navigation pour les grands écrans -->
-    <ul class="hidden md:flex md:space-x-6 text-white">
-      <li>
-        <a (click)="scrollToSection('presentation')" class="hover:text-gray-400 transition duration-300 cursor-pointer select-none">Présentation</a>
-      </li>
-      <li>
-        <a (click)="scrollToSection('skills')" class="hover:text-gray-400 transition duration-300 cursor-pointer select-none">Compétences</a>
-      </li>
-      <li>
-        <a (click)="scrollToSection('projects')" class="hover:text-gray-400 transition duration-300 cursor-pointer select-none">Projets</a>
-      </li>
-      <li>
-        <a (click)="scrollToSection('contact')" class="hover:text-gray-400 transition duration-300 cursor-pointer select-none">Contact</a>
-      </li>
+    <!-- Desktop navigation -->
+    <ul class="hidden md:flex md:space-x-6 text-black dark:text-white">
+      <li><a (click)="scrollToSection('presentation')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Présentation</a></li>
+      <li><a (click)="scrollToSection('skills')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Compétences</a></li>
+      <li><a (click)="scrollToSection('projects')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Projets</a></li>
+      <li><a (click)="scrollToSection('contact')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Contact</a></li>
     </ul>
 
-    <!-- Liens dans le menu mobile -->
-    <div *ngIf="isMenuOpen" class="fixed inset-0 bg-gray-800 text-white p-6">
-      <button (click)="isMenuOpen = false" class="absolute top-4 right-4 text-gray-400 hover:text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
+    <!-- Dark Mode Toggle -->
+    <div class="p-4 flex justify-end">
+      <button
+        (click)="toggleTheme()"
+        class="text-2xl transition duration-300 ease-in-out hover:scale-110"
+        [title]="isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'"
+      >
+        <span *ngIf="!isDarkMode">🌙</span>
+        <span *ngIf="isDarkMode">☀️</span>
       </button>
-      <ul class="space-y-8 text-center text-xl">
-        <li>
-          <a (click)="scrollToSection('presentation')" class="hover:text-gray-400 transition duration-300">Présentation</a>
-        </li>
-        <li>
-          <a (click)="scrollToSection('skills')" class="hover:text-gray-400 transition duration-300">Skills</a>
-        </li>
-        <li>
-          <a (click)="scrollToSection('projects')" class="hover:text-gray-400 transition duration-300">Projects</a>
-        </li>
-        <li>
-          <a (click)="scrollToSection('contact')" class="hover:text-gray-400 transition duration-300">Contact</a>
-        </li>
-      </ul>
     </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div *ngIf="isMenuOpen" class="fixed inset-0 bg-white dark:bg-gray-900 text-black dark:text-white p-6 z-50 transition">
+    <button (click)="isMenuOpen = false" class="absolute top-4 right-4 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <ul class="space-y-8 text-center text-xl mt-10">
+      <li><a (click)="scrollToSection('presentation')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Présentation</a></li>
+      <li><a (click)="scrollToSection('skills')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Compétences</a></li>
+      <li><a (click)="scrollToSection('projects')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Projets</a></li>
+      <li><a (click)="scrollToSection('contact')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Contact</a></li>
+    </ul>
   </div>
 </nav>
