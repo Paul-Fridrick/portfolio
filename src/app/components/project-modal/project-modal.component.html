@@ -12,7 +12,7 @@
       
       <div class="mb-6">
         <img [src]="project.image" [alt]="project.title" class="w-full h-64 object-contain rounded-lg mb-4">
-        <div class="prose max-w-none" [innerHTML]="project.content"></div>
+        <div class="markdown-body" [innerHTML]="project.content"></div>
       </div>
 
       <div class="flex flex-wrap gap-2 mb-6">

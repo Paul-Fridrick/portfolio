@@ -9,19 +9,15 @@ featured: true
 order: 1
 ---
 
-# Infrastructure
-
-## Description
-
 **Projet personnel** — J'ai développé une solution d’automatisation de déploiement pour éviter de tout refaire manuellement à chaque projet.  
 L'objectif : mettre en place une **chaîne CI/CD complète**, sécurisée, et facilement réutilisable.
 
 Ce setup s’appuie sur :
-- **Jenkins**
-- **Docker**
-- **Nginx**
-- **Let's Encrypt**
-- **Un VPS DigitalOcean**
+    - **Jenkins**
+    - **Docker**
+    - **Nginx**
+    - **Let's Encrypt**
+    - **Un VPS DigitalOcean**
 
 Résultat : un push sur GitHub déclenche automatiquement le build, la création de l’image Docker, le push vers GHCR, et le déploiement via Docker sur le serveur — avec HTTPS activé.
 
@@ -30,12 +26,12 @@ Résultat : un push sur GitHub déclenche automatiquement le build, la création
 ## Fonctionnalités
 
 ### 🔧 Stack Technologique
-- Docker, Jenkins, Nginx, HTTPS, DigitalOcean
-- Déploiement automatisé depuis GitHub jusqu'au VPS
+    - Docker, Jenkins, Nginx, HTTPS, DigitalOcean
+    - Déploiement automatisé depuis GitHub jusqu'au VPS
 
 ### 🏗️ Architecture
-- Reverse proxy Nginx
-- Configuration SSL automatique via Certbot
+    - Reverse proxy Nginx
+    - Configuration SSL automatique via Certbot
 
 ---
 
