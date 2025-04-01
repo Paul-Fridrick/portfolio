@@ -2,7 +2,7 @@
 title: Infrastructure
 slug: Infrastructure
 date: 2025-03-26
-image: images/One-Click-Black.png
+image: images/ci:cd.webp
 technologies: [Docker, Jenkins, Nginx, HTTPS]
 demo: https://pfsolutions.tech
 featured: true
@@ -20,6 +20,12 @@ Ce setup s’appuie sur :
     - **Un VPS DigitalOcean**
 
 Résultat : un push sur GitHub déclenche automatiquement le build, la création de l’image Docker, le push vers GHCR, et le déploiement via Docker sur le serveur — avec HTTPS activé.
+
+---
+
+## 🔧 Schéma d'architecture
+
+![Schéma d'Infrastructure CI/CD](images/infra-schema.png)
 
 ---
 
