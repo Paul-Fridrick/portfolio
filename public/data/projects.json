@@ -1,5 +1,22 @@
 [
   {
+    "title": "Infrastructure",
+    "slug": "Infrastructure",
+    "date": "2025-03-26T00:00:00.000Z",
+    "image": "images/ci:cd.webp",
+    "technologies": [
+      "Docker",
+      "Jenkins",
+      "Nginx",
+      "HTTPS"
+    ],
+    "demo": "https://pfsolutions.tech",
+    "featured": true,
+    "order": 1,
+    "content": "<h1>Infrastructure</h1>\n<h2>Description</h2>\n<p><strong>Projet Personnel</strong> — Développant diverses solutions sur mon temps libre pour approfondir mes connaissances, je me suis confronté à un problème : de devoir tout déployer à la main à chaque fois. Du coup je me suis posé la question de comment automatiser le déploiement de mes applications de manière sûre et sécurisée.</p>\n<p>Ce projet m&#39;a permis de construire une véritable <strong>chaîne CI/CD complète</strong>, depuis le push GitHub jusqu&#39;à la mise en ligne publique sécurisée d&#39;un projet conteneurisé. J’ai utilisé <strong>Jenkins, Docker, Nginx, Let&#39;s Encrypt et DigitalOcean</strong> pour orchestrer tout cela.</p>\n<h2>Fonctionnalités</h2>\n<h3>Stack Technologique</h3>\n<ul>\n<li>Sélection de stacks technologiques (Docker, Jenkins, Nginx, HTTPS, DigitalOcean)</li>\n<li>Automatisation du déploiement depuis GitHub jusqu&#39;à un VPS</li>\n</ul>\n<h3>Architecture</h3>\n<ul>\n<li>Reverse proxy avec Nginx et configuration automatique du SSL via Certbot</li>\n</ul>\n<h2>Défis et Solutions</h2>\n<h3>1. Déploiement multi-environnement</h3>\n<p><strong>Défi :</strong> Gérer différents environnements (dev, staging, prod) sur un seul VPS.<br><strong>Solution :</strong> Conteneurisation de chaque projet avec Docker, exposition sur des ports distincts, et reverse proxy Nginx configuré dynamiquement pour chaque domaine ou sous-domaine.</p>\n<h3>2. Sécurisation de l&#39;accès</h3>\n<p><strong>Défi :</strong> Servir les projets en HTTPS avec renouvellement automatique.<br><strong>Solution :</strong> Intégration de Certbot pour générer et renouveler automatiquement les certificats Let&#39;s Encrypt.</p>\n<h3>3. Intégration continue</h3>\n<p><strong>Défi :</strong> Automatiser la chaîne de build, test, build Docker, push, et déploiement.<br><strong>Solution :</strong> Mise en place d&#39;un pipeline Jenkins détectant chaque push GitHub et déclenchant automatiquement la chaîne CI/CD.</p>\n<h3>4. DNS &amp; Domaine personnalisé</h3>\n<p><strong>Défi :</strong> Configurer un domaine personnalisé sur un registrar externe (LWS).<br><strong>Solution :</strong> Pointage DNS manuel vers l’IP du VPS + configuration Nginx et génération SSL certifiée par Let&#39;s Encrypt.</p>\n<h2>Objectifs</h2>\n<h3>Performance</h3>\n<ul>\n<li>Uniformiser les environnements de développement</li>\n<li>Déployer automatiquement dès un <code>git push</code></li>\n</ul>\n<h3>Collaboration</h3>\n<ul>\n<li>Permettre à d&#39;autres projets de se brancher sur la même architecture</li>\n</ul>\n<h2>Vision</h2>\n<p>Ce setup me permet désormais de déployer facilement plusieurs projets (client, admin, API...) avec une logique standardisée. Il est conçu pour évoluer vers une architecture scalable, multi-sites, et potentiellement orchestrée (Docker Compose ou Kubernetes).</p>\n<h2>Résultat</h2>\n<p>Le projet de déploiement sur <code>https://pfsolutions.tech</code> en est une première démonstration concrète : push sur GitHub, génération d’image Docker, publication sur GitHub Container Registry, déploiement sur un VPS, et mise en ligne sécurisée automatiquement.</p>\n",
+    "id": "infra"
+  },
+  {
     "title": "OneClick",
     "slug": "OneClick",
     "date": "2025-03-26T00:00:00.000Z",
