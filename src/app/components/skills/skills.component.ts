@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule} from '@angular/common';
-
+import { Skill } from '../../models/skills.interface';
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -8,8 +8,8 @@ import { CommonModule} from '@angular/common';
   templateUrl: './skills.component.html',
 })
 export class SkillsComponent {
-  Frontend = [
-    { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg', name: 'Angular', level: 'Connaissances avancées' },
+  Frontend: Skill[] = [
+    { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg', name: 'Angular', level: 'Connaissances avancées'},
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', name: 'TypeScript', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg', name: 'Ionic', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', name: 'HTML & CSS', level: 'Connaissances avancées' },
@@ -18,7 +18,7 @@ export class SkillsComponent {
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg', name: 'Vue', level: 'Connaissances basiques' }
   ];
 
-  Backend = [
+  Backend: Skill[] = [
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', name: 'NodeJS', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', name: 'ExpressJS', level: 'Connaissances avancées' },
     { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg',name: 'NestJS', level: 'Connaissances avancées' },

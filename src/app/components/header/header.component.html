@@ -19,29 +19,30 @@
 
     <!-- Desktop navigation -->
     <ul class="hidden md:flex md:space-x-6 text-black dark:text-white">
-      <li><a (click)="scrollToSection('presentation')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Présentation</a></li>
-      <li><a (click)="scrollToSection('skills')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Compétences</a></li>
-      <li><a (click)="scrollToSection('projects')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Projets</a></li>
-      <li><a (click)="scrollToSection('contact')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Contact</a></li>
+      <li><a (click)="scrollToSection('presentation')" class="hover:scale-110 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-800 transition">Présentation</a></li>
+      <li><a (click)="scrollToSection('skills')" class="hover:scale-110 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-800 transition">Compétences</a></li>
+      <li><a (click)="scrollToSection('projects')" class="hover:scale-110 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-800 transition">Projets</a></li>
+      <li><a (click)="scrollToSection('contact')" class="hover:scale-110 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-800 transition">Contact</a></li>
     </ul>
 
-    <!-- Dark Mode Toggle -->
-    <div class="p-4 flex justify-end">
+    <!-- Dark Mode Toggle Desktop -->
+    <div class="hidden md:block">
       <button
         (click)="toggleTheme()"
-        class="text-2xl transition duration-300 ease-in-out hover:scale-110"
+        class="text-2xl transition duration-300 ease-in-out hover:scale-110 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
         [title]="isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'"
       >
-        <span *ngIf="!isDarkMode">🌙</span>
-        <span *ngIf="isDarkMode">☀️</span>
+        <span *ngIf="!isDarkMode" class="inline-block">🌙</span>
+        <span *ngIf="isDarkMode" class="inline-block">☀️</span>
       </button>
     </div>
   </div>
 
   <!-- Mobile menu -->
   <div *ngIf="isMenuOpen" class="fixed inset-0 bg-white dark:bg-gray-900 text-black dark:text-white p-6 z-50 transition">
-    <button (click)="isMenuOpen = false" class="absolute top-4 right-4 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button (click)="isMenuOpen = false" 
+            class="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 ease-in-out">
+      <svg class="w-6 h-6 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M6 18L18 6M6 6l12 12"></path>
       </svg>
@@ -52,5 +53,17 @@
       <li><a (click)="scrollToSection('projects')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Projets</a></li>
       <li><a (click)="scrollToSection('contact')" class="hover:text-gray-500 dark:hover:text-gray-300 transition">Contact</a></li>
     </ul>
+    
+    <!-- Dark Mode Toggle Mobile -->
+    <div class="mt-8 flex justify-center">
+      <button
+        (click)="toggleTheme()"
+        class="text-2xl transition duration-300 ease-in-out hover:scale-110 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+        [title]="isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'"
+      >
+        <span *ngIf="!isDarkMode" class="inline-block">🌙</span>
+        <span *ngIf="isDarkMode" class="inline-block">☀️</span>
+      </button>
+    </div>
   </div>
 </nav>
