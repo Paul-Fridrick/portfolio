@@ -1,35 +1,35 @@
-<section id="skills" class="bg-white dark:bg-gray-900 pt-20 pb-12 transition-colors duration-300">
+<section id="skills" class="bg-gray-100 dark:bg-gray-800 pt-20 pb-12 transition-colors duration-300">
   <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Mes Compétences</h2>
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Mes Compétences</h2>
     
     <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 p-4">
       
       <!-- Front-End -->
       <div class="md:w-1/2">
-        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Front-End</h3>
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Front-End</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div *ngFor="let frontend of Frontend"
-               class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+               class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-300">
             <div class="flex justify-center items-center space-x-2">
               <img [src]="frontend.logo" alt="{{ frontend.name }} logo" class="w-8 h-8">
-              <h4 class="text-xl font-semibold text-gray-800 dark:text-white">{{ frontend.name }}</h4>
+              <h4 class="text-xl font-semibold text-gray-900 dark:text-white">{{ frontend.name }}</h4>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 mt-2">{{ frontend.level }}</p>
+            <p class="text-gray-800 dark:text-gray-200 mt-2">{{ frontend.level }}</p>
           </div>
         </div>
       </div>
       
       <!-- Back-End -->
       <div class="md:w-1/2">
-        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Back-End</h3>
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Back-End</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div *ngFor="let backend of Backend"
-               class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+               class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-300">
             <div class="flex justify-center items-center space-x-2">
               <img [src]="backend.logo" alt="{{ backend.name }} logo" class="w-8 h-8">
-              <h4 class="text-xl font-semibold text-gray-800 dark:text-white">{{ backend.name }}</h4>
+              <h4 class="text-xl font-semibold text-gray-900 dark:text-white">{{ backend.name }}</h4>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 mt-2">{{ backend.level }}</p>
+            <p class="text-gray-800 dark:text-gray-200 mt-2">{{ backend.level }}</p>
           </div>
         </div>
       </div>

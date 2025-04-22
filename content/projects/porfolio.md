@@ -3,7 +3,7 @@ title: Portfolio
 slug: portfolio
 date: 2025-04-03
 image: images/logo PF Solutions.jpg
-technologies: [Angular, TypeScript, TailwindCSS, GitHub Pages]
+technologies: [Angular, TypeScript, TailwindCSS]
 demo: https://pfsolutions.tech
 featured: true
 order: 4

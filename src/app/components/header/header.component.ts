@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ViewportScroller} from '@angular/common';
 
@@ -8,13 +8,16 @@ import { ViewportScroller} from '@angular/common';
   imports: [CommonModule],
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isDarkMode = false;
 
-  constructor(private viewport: ViewportScroller) {}
+  constructor(
+    private viewport: ViewportScroller
+  ) {}
 
   ngOnInit(): void {
+    // Thème
     const savedTheme = localStorage.getItem('theme');
     this.isDarkMode = savedTheme === 'dark';
     if (this.isDarkMode) {
@@ -33,5 +36,4 @@ export class HeaderComponent {
     this.isMenuOpen = false;
     this.viewport.scrollToAnchor(sectionId);
   }
-
 }

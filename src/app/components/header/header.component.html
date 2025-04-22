@@ -26,11 +26,11 @@
     </ul>
 
     <!-- Dark Mode Toggle Desktop -->
-    <div class="hidden md:block">
+    <div class="md:block">
       <button
         (click)="toggleTheme()"
         class="text-2xl transition duration-300 ease-in-out hover:scale-110 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
-        [title]="isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'"
+        title="{{isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'}}"
       >
         <span *ngIf="!isDarkMode" class="inline-block">🌙</span>
         <span *ngIf="isDarkMode" class="inline-block">☀️</span>
@@ -59,7 +59,7 @@
       <button
         (click)="toggleTheme()"
         class="text-2xl transition duration-300 ease-in-out hover:scale-110 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
-        [title]="isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'"
+        title="{{isDarkMode ? 'Passer au thème clair' : 'Passer au thème sombre'}}"
       >
         <span *ngIf="!isDarkMode" class="inline-block">🌙</span>
         <span *ngIf="isDarkMode" class="inline-block">☀️</span>
