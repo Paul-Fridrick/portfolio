@@ -4,6 +4,7 @@ slug: Safecode
 date: 2025-03-26
 image: https://www.intigriti.com/blog/news/owasp-top-10
 technologies: [Nuxt, GO, Docker, OWAPS]
+github: https://github.com/Capstone-SafeCode/Documentations.git
 demo: https://youtu.be/R2mLn4wOaj8
 featured: true
 order: 1
