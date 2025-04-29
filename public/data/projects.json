@@ -35,6 +35,23 @@
     "id": "oneclick"
   },
   {
+    "title": "Safecode",
+    "slug": "Safecode",
+    "date": "2025-03-26T00:00:00.000Z",
+    "image": "https://www.intigriti.com/blog/news/owasp-top-10",
+    "technologies": [
+      "Nuxt",
+      "GO",
+      "Docker",
+      "OWAPS"
+    ],
+    "demo": "https://youtu.be/R2mLn4wOaj8",
+    "featured": true,
+    "order": 1,
+    "content": "<h2>Description</h2>\n<p><strong>Projet de spécialisation</strong> 🎓 - Durant ma 4e année, j&#39;ai décidé de me spécialiser en CyberSécurité 🔒. Dans le cadre de la validation de celle-ci, j&#39;ai dû réaliser, en groupe de 4, une solution dans le thème de ma spé. C&#39;est de là qu&#39;est née <strong>SafeCode</strong> 🚀.</p>\n<p><strong>SafeCode</strong> est une solution qui permet de tester les possibles failles de sécurité directement dans son code, basé sur le top10 des erreurs OWAPS (The Open Web Application Security Project) 🛡️.</p>\n<p>Ce projet s&#39;appuie sur différentes technologies :</p>\n<ul>\n<li><strong>Nuxt</strong> ⚡ pour un front rapide et propre.</li>\n<li><strong>Go</strong> 🧩 pour le back autant pour l&#39;API que pour l&#39;engine d&#39;analyse. Le <strong>Go</strong> permet une rapidité d&#39;exécution.</li>\n<li><strong>MongoDB</strong> 🛢️ pour une base de données stable et modifiable à tout moment.</li>\n<li><strong>Docker</strong> 🐳 pour faire tourner l&#39;application dans un environnement sain.</li>\n</ul>\n<p><strong>Résultat</strong> 🎯 - L&#39;application permet de tester la sécurité de son code, en mettant un <code>.zip</code> 📦 ou directement en rentrant un lien vers le repository Github 🔗.<br>L&#39;utilisateur peut également retrouver son historique de test pour revenir ou revoir ses erreurs passées 📚.</p>\n<hr>\n<h2>Fonctionnalités</h2>\n<ul>\n<li><p><strong>Upload du code</strong> 🖇️ : deux manières différentes d&#39;upload son code sur l&#39;application</p>\n<ul>\n<li>On peut envoyer un <code>.zip</code>, l&#39;application se chargera de récupérer les fichiers à l&#39;intérieur 📂 et de déterminer la technologie.</li>\n<li>On peut envoyer un lien du repository Github 🔗 pour que l&#39;upload récupère directement les fichiers.</li>\n</ul>\n</li>\n<li><p><strong>Analyse</strong> 🔍 : permet d&#39;analyser le code en fonction de la technologie et des règles déterminées dans l&#39;application.</p>\n</li>\n<li><p><strong>Historique de test</strong> 🕰️ : chaque utilisateur peut retrouver dans son compte l&#39;historique des tests qu&#39;il a faits pour lui permettre de revenir sur un morceau de code ou sur une erreur précise.</p>\n</li>\n</ul>\n<hr>\n<h2>Défis et Solutions</h2>\n<p>Durant tout le projet plusieurs défis se sont confrontés à nous et en particulier à moi.</p>\n<h3>Simplification de l&#39;interface par rapport aux concurrents</h3>\n<blockquote>\n<p><strong>Défi</strong> ⚠️ : Ne pas perdre l&#39;utilisateur dès qu&#39;il arrive sur l&#39;application<br><strong>Solution</strong> ✅ : Utiliser les nouveaux codes et une interface moderne et simple</p>\n</blockquote>\n<h3>La compréhension des erreurs</h3>\n<blockquote>\n<p><strong>Défi</strong> ⚠️ : Comprendre les erreurs et surtout comment les résoudre en fonction de la technologie<br><strong>Solution</strong> ✅ : Manger des pages de documentation 📖 et s&#39;aider de l&#39;IA 🤖 pour la réalisation</p>\n</blockquote>\n<h3>L&#39;apprentissage du GO</h3>\n<blockquote>\n<p><strong>Défi</strong> ⚠️ : Apprendre un nouveau langage n&#39;est jamais évident, mais avec les connaissances que j&#39;ai acquises en C et C++ au cours de mon cursus à EPITECH, cela m&#39;a permis de comprendre vite le langage.<br><strong>Solution</strong> ✅ : Commencer par des parties que l&#39;on sait faire dans un autre langage avant de complexifier les choses.</p>\n</blockquote>\n<h3>La communication dans le groupe</h3>\n<blockquote>\n<p><strong>Défi</strong> ⚠️ : Faire en sorte que tout le groupe avance en même temps et que chaque membre ait du travail<br><strong>Solution</strong> ✅ : Rendez-vous hebdomadaire 📅 pour faire un point, en plus des points avec les Projects Managers (Féli &amp;&amp; Emilie)</p>\n</blockquote>\n<h3>L&#39;anglais</h3>\n<blockquote>\n<p><strong>Défi</strong> ⚠️ : Communiquer en anglais sur chaque rendu, documentation et rendez-vous<br><strong>Solution</strong> ✅ : Se forcer malgré les fautes, les hésitations ou les tentatives de faire passer un mot français avec l&#39;accent anglais 😅, à parler.</p>\n</blockquote>\n<hr>\n<h2>Objectifs</h2>\n<h3>Performances 🚀</h3>\n<ul>\n<li>Avoir un algorithme rapide et efficace</li>\n<li>Permettre à plusieurs utilisateurs de faire des tests simultanés</li>\n</ul>\n<h3>Ajout de nouvelles technologies facilement 🛠️</h3>\n<ul>\n<li>Pouvoir ajouter dans l&#39;engine d&#39;analyse une nouvelle technologie facilement</li>\n</ul>\n<hr>\n<h2>Résultat</h2>\n<p>La solution supporte :</p>\n<ul>\n<li>deux technologies : Python 🐍 et C# ⚙️</li>\n<li>L&#39;interface est très simple d&#39;utilisation 🎨</li>\n</ul>\n<hr>\n<h2>Vision</h2>\n<p>Cette application est amenée à évoluer :</p>\n<ul>\n<li>Plus de technologies 🔥</li>\n<li>Une plateforme collaborative pour travailler en équipe 🤝</li>\n<li>Toujours améliorer et optimiser l&#39;engine ⚡</li>\n</ul>\n",
+    "id": "safecode"
+  },
+  {
     "title": "Portfolio",
     "slug": "portfolio",
     "date": "2025-04-03T00:00:00.000Z",
@@ -42,8 +59,7 @@
     "technologies": [
       "Angular",
       "TypeScript",
-      "TailwindCSS",
-      "GitHub Pages"
+      "TailwindCSS"
     ],
     "demo": "https://pfsolutions.tech",
     "featured": true,
