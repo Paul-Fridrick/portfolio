@@ -28,7 +28,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          npm ci
+          npm install
           npm install gray-matter marked mkdirp --save-dev
       
       - name: Process Markdown content
