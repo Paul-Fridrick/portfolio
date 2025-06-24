@@ -49,7 +49,7 @@ pipeline {
             --label "traefik.enable=true" \
             --label "traefik.http.routers.portfolio.rule=Host(`portfolio.pfsolutions.tech`)" \
             --label "traefik.http.routers.portfolio.entrypoints=websecure" \
-            --label "traefik.http.routers.portfolio.tls.certresolver=letsencrypt" \
+            --label "traefik.http.routers.portfolio.tls.certresolver=myresolver" \
             --label "traefik.http.services.portfolio.loadbalancer.server.port=80" \
             ${DOCKER_IMAGE}:${DOCKER_TAG}
         '''
