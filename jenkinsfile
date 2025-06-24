@@ -47,7 +47,7 @@ pipeline {
           docker rm portfolio || true
           docker run -d --name portfolio \
             --label "traefik.enable=true" \
-            --label "traefik.http.routers.portfolio.rule=Host(`portfolio.pfsolutions.tech`)" \
+            --label "traefik.http.routers.portfolio.rule=Host(`pfsolutions.tech`)" \
             --label "traefik.http.routers.portfolio.entrypoints=websecure" \
             --label "traefik.http.routers.portfolio.tls.certresolver=myresolver" \
             --label "traefik.http.services.portfolio.loadbalancer.server.port=80" \
