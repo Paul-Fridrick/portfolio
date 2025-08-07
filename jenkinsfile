@@ -4,7 +4,7 @@ pipeline {
   environment {
     DOCKER_IMAGE = "ghcr.io/paul-fridrick/portfolio"
     DOCKER_TAG = "${env.BUILD_NUMBER}"
-    GITHUB_TOKEN = credentials('Github-Paul')
+    GITHUB_TOKEN = credentials('github-portfolio-token')
     CONTAINER_PORT = "3000"
   }
 
