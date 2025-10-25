@@ -1,12 +1,12 @@
 name: CI - Build API Docker Image
 
 on:
-  workflow_run:
-    workflows: ["CI - OneClick API"]
-    types:
-      - completed
+  push:
     branches:
-        - master
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
