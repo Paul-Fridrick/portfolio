@@ -1,16 +1,13 @@
-FROM node:18 AS build
-
+# Étape 1 : Build Angular
+FROM node:22-alpine AS build
 WORKDIR /app
-
 COPY package*.json ./
 RUN npm install
-
 COPY . .
-RUN npm run build --configuration=production
+RUN npm run build
 
+# Étape 2 : Servir avec Nginx
 FROM nginx:alpine
-
-# 👇 copie les vrais fichiers Angular !
-COPY --from=build /app/dist/portfolio/browser /usr/share/nginx/html
-
+COPY --from=build /app/dist/portfolio /usr/share/nginx/html
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
