@@ -5,6 +5,8 @@ on:
     workflows: ["CI - OneClick API"]
     types:
       - completed
+    branches:
+        - master
 
 jobs:
   build:
