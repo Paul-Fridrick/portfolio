@@ -24,8 +24,8 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v4
         with:
-            context: ./api
+            context: .
             push: true
             tags: |-
-              ghcr.io/eip-oneclick/oneclick_api:latest
-              ghcr.io/eip-oneclick/oneclick_api:${{ github.sha }}
+              ghcr.io/portfolio/portfolio:latest
+              ghcr.io/portfolio/portfolio:${{ github.sha }}
