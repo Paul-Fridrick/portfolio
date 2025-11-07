@@ -8,5 +8,5 @@ RUN npm run build
 
 # Étape 2 : Servir avec Nginx
 FROM nginx:alpine
-COPY --from=build /app/dist/portfolio /usr/share/nginx/html
+COPY --from=build /app/dist/portfolio/browser /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
