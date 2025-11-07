@@ -15,8 +15,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Login to GitHub Container Registry
-        run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
       - name: Deploy to Server
         uses: appleboy/ssh-action@v0.1.6
         with:
@@ -25,8 +24,8 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           envs: GHCR_TOKEN=${{ secrets.GHCR_TOKEN }}
           script: |
-            echo "Deploying OneClick API..."
-            cd /opt/oneclick-api
+            echo "Deploying Portfolio..."
+            cd /opt/portfolio
             echo "Pulling latest Docker image..."
             docker compose pull
             echo "Starting updated containers..."
