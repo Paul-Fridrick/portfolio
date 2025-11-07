@@ -1,5 +1,5 @@
 # Étape 1 : Build Angular
-FROM node:21 AS build
+FROM node:22-alpine3.22 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --legacy-peer-deps
