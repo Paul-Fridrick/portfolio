@@ -27,5 +27,5 @@ jobs:
             context: .
             push: true
             tags: |-
-              ghcr.io/portfolio/portfolio:latest
-              ghcr.io/portfolio/portfolio:${{ github.sha }}
+              ghcr.io/${{ github.actor }}/portfolio:latest
+              ghcr.io/${{ github.actor }}/portfolio:${{ github.sha }}
