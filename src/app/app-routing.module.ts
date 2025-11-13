@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./features/hero/hero-routing.module').then(m => m.HeroRoutingModule) },
+  { path: '', loadComponent: () => import('./features/hero/hero.component').then(m => m.HeroComponent) },
 ];
 
 @NgModule({
